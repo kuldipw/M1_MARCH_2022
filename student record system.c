@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <windows.h>
 
-struct student{
+struct stud{
     char ID[15];
     char name[20];
     char add[20];
@@ -13,7 +13,7 @@ struct student{
     long unsigned int phone_no;
 };
 
-struct student stu;
+struct stud stu;
 
 void SetColor(int ForgC)
 {
@@ -48,7 +48,7 @@ void ClearConsoleToColors(int ForgC, int BackC)
 
 void SetColorAndBackground(int ForgC, int BackC)
 {
-     WORD wColor = ((BackC & 0x0F) << 4) + (ForgC & 0x0F);;
+     WORD wColor = ((BlueC & 0x0F) << 4) + (ForgC & 0x0F);;
      SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), wColor);
      return;
 }
@@ -130,7 +130,7 @@ void window(){
     SetColor(35);
     printf("STUDENT RECORD SYSTEM");
     gotoxy(20,3);
-    printf("Tribhuvan University, Kathmandu, Nepal");
+    printf("Nagpur University, Nagpur, Maharastra");
     gotoxy(31,4);
     printf("Estd.: 2016 B.S.");
     gotoxy(25,24);
